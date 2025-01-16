@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale-1">
+  <title>Menu</title>
+  <link rel="icon" type="image/x-icon" href="logo.png">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!-- css file -->
+
+  <link rel="stylesheet" type="text/css" href="Menu.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+  </head>
+  <body>
+
+<!-- header start -->
+
+<header class="header">
+
+<!-- logo -->
+
+     <a href="Home.html" class="logo">
+     <img src="/storage/emulated/0/Pictures/Untitled71_20250113195240.png"  width="100" height="100">
+     </a>
+
+<!-- nav bar start -->
+
+     <nav class="navbar">
+     <input type="checkbox" id="check">
+     <label for="check" class="check-btn">
+     <i class="fas fa-bars"></i>
+  </label>
+   <ul>
+    <li><a href="Home.html">Home</a></li>
+    <li><a class="active" href="About us.html">About Us</a></li>
+  </ul>
+
+<!--<div id="menu-btn" class="fas fa-bars"></div>-->
+
+   </nav>
+
+<!-- nav bar end -->
+<!-- hyperlink with icons (search, cart, profile, menu button)-->
+
+      <div class = "icons">
+      <div class="cart-container" onmouseover="showCartForm()" onmouseout="hideCartForm()">
+      <a href="4-cart.html">
+      <div class="fas fa-shopping-cart" id="cartButton"></div>
+   </a>
+
+      <div class="cart-form" id="cartForm">
+      <form>
+      <div id="cartItems"></div>
+      <div id="total-price">Total Price: <span> id="totalPrice">0.00</span></div>
+  </form>
+   </div>
+   </div>
+
+<!-- hyperlink with icons (search, cart, profile, menu button)-->
+   </header>
+
+    <!-- header end -->
+    
+    <!-- Menu Section -->
+    
+    <section class="menu" id="menu">
+         <h1 text-align="center"style="color:white"class="heading">OUR <span style="color:#E799A3">MENU</span></h1>
+         <p class="heading-description">Every Bite and Sip, a Blush of Happiness</p>
+        <div class="category-text"><h3 >Blush Bites</h3></div>
+        <div class="menu">
+          <div class="container menu-section">
+            
+    
+    
+  <!-- product 1-->
+
+        <div class="menu-box">
+          <div class="menu-img">
+            <img src="/storage/emulated/0/Pictures/Untitled71_20250113201805.png" width="500" height="300"alt="Pink Velvet Cake">
+         </div>
+        <div class="menu-content" >
+         <h3>Pink Velvet Cake</h3>
+          <p>
+            Our Pink Velvet Cake is a soft, tender cake with a hint of cocoa and a beautiful pink hue, topped with rich cream cheese frosting for a perfect sweet treat.
+          </p>
+          <div onclick="addToCart('Pink Velvet Cake (Slice)', '₱90.00', '/storage/emulated/0/Download/Pink-Velvet-Cake-Hero-6-scaled.jpg', 'itemi-s'); return false;">
+            <button id="itemi-s">Slice <span>₱90.00</span></button> <!-- Slice -->
+          </div> <div onclick="addToCart("Pink Velvet Cake (Bento)', 'P200.00', '/storage/emulated/0/Download/Pink-Velvet-Cake-Hero-6-scaled.jpg', "itemi-m'); return false;">
+            <button id="item1-m">Bento <span>₱100.00</span></button> <!-- Bento -->
+          </div>
+           <div onclick="addToCart('Pink Velvet Cake (7x7 Circle Cake)', 'P500.00', '/storage/emulated/0/Download/Pink-Velvet-Cake-Hero-6-scaled.jpg', 'itemi-1'); return false;">
+          </div>
+            <button id="item1-1">7x7 Circle Cake <span>₱500.00</span></button> <!-- 7x7 circle cake -->
+         </div>
+         </div>
+
+        
+      <!-- product 2-->
+
+         <div class="menu-box">
+         <div class="menu-img">
+           <img src="/storage/emulated/0/Pictures/Untitled71_20250113201349.png"width="500" height="300"alt="Strawberry Cake">
+      </div>
+         <div class="menu-content">
+          <h3>Strawberry Cake</h3>
+           <p> 
+              Our Strawberry Cake features soft, moist layers made with real strawberries, offering a deliciously sweet and fruity flavor. Finished with a creamy frosting, it’s the perfect dessert to brighten any celebration.
+           </p>
+         <div onclick="addToCart("Frappe Strawberry P90.00', '/storage/emulated/0/Download/Gluten-Free-Strawberry-Cake-1.2.jpg', 'item2-s'); return false;">
+           <button id="item2-s">Slice <span>₱100.00</span></button>
+      </div>
+        <div onclick="addToCart("Strawberry Cake (Bento)', '₱200.00, '/storage/emulated/0/Download/Gluten-Free-Strawberry-Cake-1.2.jpg', 'item2-m'); return false;">
+          <button id="item2-m">Bento <span>₱200.00</span></button>
+        </div>
+        <div onclick="addToCart(' Strawberry Cake (7x7 Circle Cake)', '₱600.00', '/storage/emulated/0/Download/Gluten-Free-Strawberry-Cake-1.2.jpg', 'item2-1'); return false;">
+          <button id="item2-1">7x7 Circle Cake <span>₱600.00</span></button>
+      </div>
+      </div>
+      </div>
+            
+            <!-- product 4 -->
+
+        <div class="menu-box" id="frappe-javachip">
+          <div class="menu-img">
+            <img src="/storage/emulated/0/Pictures/Untitled71_20250113204147.png"width="500" height="300"alt="Frappe Javachip">
+     </div>
+         <div class="menu-content">
+           <h3> Cherry Cheesecake</h3>
+          <p>Our Cherry Cheesecake combines a rich, creamy cheesecake filling with a crunchy crust, topped with a sweet cherry compote. This indulgent treat offers the perfect mix of tangy, creamy, and fruity flavors with a delicious crunch.</p>
+          <div onclick="addToCart('Oreo Cherry Cheesecake (Slice)', 'P90.00', 'Products/No BG/frappe-javachip.png', 'item4-s'); return false;">
+             <button id="item4-s">Slice <span>₱120.00</span></button><br>
+     </div>
+           <div onclick="addToCart('Oreo Cherry Cheesecake (Bento)', 'P100.00', 'Products/No BG/frappe-javachip.png', 'item4-m'); return false;">
+             <button id="item4-m">Bento <span>₱350.00</span></button>
+     </div>
+           <div onclick="addToCart('Oreo Cherry Cheesecake (7x7 Circle Cake)', 'P120.00', 'Products/No BG/frappe-javachip.png", 'item4-1'); return false;">
+              <button id="item4-1">7x7 Circle Cake <span>₱700.00</span></button>
+     </div>
+     </div>
+     </div>
+
+            
+        
+        
+      
+        <!-- Add more menu items here with the same structure -->
+      
+          </div>
+             <div class="category-text"><h3 style="color:white">Rosy Refresher</h3></div>
+             <div class="container menu-section">
+
+          <!-- product 1 -->
+
+           <div class="menu-box" id="iced-americano">
+             <div class="menu-img">
+               <img src="/storage/emulated/0/Pictures/Untitled71_20250113214739.png" width="500" height="300"alt="Iced Americano">
+     </div>
+            <div class="menu-content">
+              <h3>Berry Milk</h3>
+              <p>Our Strawberry Milk is a creamy, refreshing blend of rich milk and the sweet, fruity flavor of ripe strawberries. Perfectly balanced and irresistibly smooth.</p>
+            <div onclick="addToCart('Iced Americano (Small), 190.00', '/storage/emulated/0/Download/pink-drink-recipe-recipe-card.jpg', 'item5-s'); return false;">
+               <button id="item5-5">Small <span>₱90.00</span></button><br>
+     </div>
+             <div onclick="addToCart('Iced Americano (Medium), 100.00', '/storage/emulated/0/Download/pink-drink-recipe-recipe-card.jpg', 'items-m'); return false;">
+                <button id="item5-m">Medium <span>₱100.00</span></button>
+     </div>
+              <div onclick="addToCart('Iced Americano (Large)', 'P120.00', '/storage/emulated/0/Download/pink-drink-recipe-recipe-card.jpg', 'item5-1'); return false;">
+                <button id="item5-1">Large <span>₱120.00</span></button>
+     </div>
+     </div>
+     </div>
+          
+       
+        
+     <!-- product 2 -->
+
+              <div class="menu-box">
+                <div class="menu-img">
+                  <img src="/storage/emulated/0/Pictures/Untitled71_20250113215848.png"width="500" height="300"alt="Iced Cafelatte">
+      </div>
+              <div class="menu-content">
+                <h3>Pink Whipped Lemonade </h3>
+                <p>Our Pink Whipped Lemonade is a tangy and creamy blend of zesty lemonade and a hint of sweetness, topped with a fluffy whipped topping. </p>
+                <div onclick="addToCart('Iced Cafelatte (Small), P90.00", "/storage/emulated/0/Download/IMG_8138-scaled-720x720.jpg', 'item6-s'); return false;">
+                  <button id="itemō-s">Small <span>₱90.00</span></button>
+      </div>
+                <div onclick="addToCart("Iced Cafelatte (Medium)', 'P100.00', '/storage/emulated/0/Download/IMG_8138-scaled-720x720.jpg', 'item6-m'); return false;">
+                  <button id="itemō-m">Medium <span>₱100.00</span></button>
+      </div>
+                <div onclick="addToCart('Iced Cafelatte (Large)', 'P120.00', '/storage/emulated/0/Download/IMG_8138-scaled-720x720.jpg', 'item6-1'); return false;">
+                  <button id="item6-1">Large <span>₱120.00</span></button>
+      </div>
+      </div>
+      </div>
+        
+        <!-- product 3 -->
+         <div class="menu-box">
+                   <div class="menu-img">
+                     <img src="/storage/emulated/0/Pictures/Untitled71_20250114104609.png"width="300" height="300"alt="Iced Caramelatte">
+        </div> 
+                   <div class="menu-content">
+                     <h3>Berry Smoothie</h3>
+                     <p>Our Berry Smoothie is a refreshing blend of mixed berries, perfectly balanced with a smooth, creamy texture. Packed with natural sweetness and nutrients, it's a vibrant and healthy treat .</p>
+                     <div onclick="addToCart('Iced Caramelatte (Small), P90.00', 'Products/No 8G/iced_caramellatte.png", 'item8-s'); return false;">
+                       <button id="item8-s">Small <span>₱90.00</span></button>
+        </div>
+                     <div onclick="addToCart('Iced Caramelatte (Medium)', 'P100.00', 'Products/No BG/iced_caramellatte.png', 'items-m"); return false;">
+        </div>
+                     <button id="item8-m">Medium <span>₱100.00</span></button>
+                     <div onclick="addToCart("Iced Caramelatte (Large)', 'P120.00', 'Products/No BG/iced_caramellatte.png", 'item8-1'); return false;">
+                       <button id="item8-1">Large <span>₱120.00</span></button>
+        </div>
+        </div>
+        </div>
+        
+       
+         
+        <!-- Add more menu items here with the same structure-->
+        </div>
+
+             <div class="category-text"><h3 style="color:white">Hot Pink</h3></div>
+             <div class="container menu-section">
+
+        <div class="menu-box">
+               <div class="menu-img">
+                   <img src="/storage/emulated/0/Pictures/Untitled71_20250114112046.png"width="300" height="300"alt="Raspberry Hot Chocolate">
+       </div>
+               <div class="menu-content">
+                 <h3>Raspberry Hot Chocolate</h3>
+                 <p>Indulge in the perfect harmony of rich, creamy chocolate and the tangy sweetness of ripe raspberries. This luxurious hot beverage combines velvety cocoa with a burst of fruity flavor, creating a decadent treat that's both comforting and refreshing. </p>
+                 <div onclick="addToCart('Raspberry Hot Chocolate (Small)', 'P90.00', '/storage/emulated/0/Download/DSC_0157.gif', 'item9-s'); return false;">
+                   <button id="item9-s">Small <span>₱90.00</span></button>
+        </div>
+                 <div onclick="addToCart("Raspberry Hot Chocolate (Medium)', 'P100.00', '/storage/emulated/0/Download/DSC_0157.gif', 'items-m'); return false;">
+                   <button id="item9-m">Medium <span>₱100.00</span></button>
+        </div>
+                 <div onclick="addToCart('Raspberry Hot Chocolate (Large)', 'P120.00', '/storage/emulated/0/Download/DSC_0157.gif'); return false;">
+                   <button id="item9-1">Large <span>₱120.00</span></button>
+        </div>
+        </div>
+        </div>
+
+
+        <!-- product 2 -->
+          <div class="menu-box">
+                <div class="menu-img">
+                    <img src="/storage/emulated/0/Pictures/Untitled71_20250114111456.png"width="300" height="300"alt="Hot Cafelatte">
+         </div>
+                <div class="menu-content">
+                  <h3>Rose Latte</h3>
+                  <p>A smooth blend of espresso and floral rose syrup, topped with creamy milk and a sprinkle of rose petals. Elegant, aromatic, and indulgent.</p>
+                  <div onclick="addToCart("Rose Latte (Small)', 'P90.00', '/storage/emulated/0/Download/Rose-Latte-new.jpg", 'item10-s'); return false;">
+                    <button id="item10-s">Small <span>₱90.00</span></button>
+         </div>
+                  <div onclick="addToCart('Rose Latte (Medium)', 'P100.00', '/storage/emulated/0/Download/Rose-Latte-new.jpg", 'item10-m'); return false;">
+                    <button id="item10-m">Medium <span>₱100.00</span></button>
+         </div>
+                  <div onclick="addToCart("Rose Latte (Large)', 'P120.00', '/storage/emulated/0/Download/Rose-Latte-new.jpg', 'item10-1'); return false;">
+                    <button id="item10-1">Large <span>₱120.00</span></button>
+         </div>
+         </div>
+         </div>
+
+      <!-- product 3 -->
+        <div class="menu-box">
+                  <div class="menu-img">
+                     <img src="/storage/emulated/0/Pictures/Untitled71_20250114113135.png"width="300" height="300"alt="Hot Cappuccino">
+         </div>
+                  <div class="menu-content">
+                    <h3>Kashmiri Blushing Chai</h3>
+                    <p>A luxurious pink tea made with green tea leaves, milk, and delicate spices like cardamom and cinnamon. Creamy, aromatic, and naturally enchanting.</p>
+                    <div onclick="addToCart('Kashmiri Blushing Chai (Small)', 'P90.00', '/storage/emulated/0/Download/8c99a4d0520683eb0d1fdf3b031ae11c.jpg", 'Item11-s'); return false;">
+                      <button id="item11-s">Small <span>₱90.00</span></button>
+         </div>
+                    <div onclick="addToCart('Kashmiri Blushing Chai (Medium)', 'P100.00', '/storage/emulated/0/Download/8c99a4d0520683eb0d1fdf3b031ae11c.jpg', 'item11-m'); return false;">
+                      <button id="item11-m">Medium <span>₱100.00</span></button><br>
+         </div>
+                    <div onclick="addToCart('Kashmiri Blushing Chai (Large)', 'P120.00', '/storage/emulated/0/Download/8c99a4d0520683eb0d1fdf3b031ae11c.jpg', 'item11-1'); return false;">
+                      <button id="item11-1">Large <span>₱120.00</span></button>
+         </div>
+         </div>
+         </div>
+
+     
+        </section>
+        <!-- Menu Section End -->
+
+        <!-- footer start -->
+        <section class="footer">
+          
+          <div class="container">
+            <div class="footer-box-1">
+              <h3 style="color:#595959"> Location</h3>
+              <div class="footer-loc">
+                <a style="color:white" href = "https://www.google.com/maps/place/TUP+-+College+of+Industrial+Technology/@14.5873937,128.9848474,17z/ data=!3m1!4b1!4m6!3m5!1s0x3397cb93cd451575:0x6247d293ffefede0!8m2!3d14.5873937140128.98484741165/8/11hfq216nk?hl=en&entry-ttu" target-blank>College of Industrial Technology, 660. TUP, Ermita, Manila, 1000</a>
+                
+        </div>
+        </div>
+            <div class="footer-box">
+              <h3 style="color:#595959"> Newsletter</h3>
+              <p style="color:white"> Stay update with our latest</p>
+              <form>
+                <input type="email" name="email" placeholder="name@gmail.com">
+                <button type="submit"><i class="fa-solid fa-right-long"></i></button>
+              </form>
+            </div>
+            
+            <div class="footer-box">
+              <h3 style="color:#595959"> Contact Us</h3>
+              <p style="color:white"> Connect with us on:</p>
+              <div class="icons">
+                <a style="color:white"href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a style="color:white" href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a style="color:white"href="#"><i class="fa-brands fa-twitter"></i></a>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+    <!-- footer end -->
+        <script src="2-menu.js"></script>
+      </body>
+    </html>
+              
